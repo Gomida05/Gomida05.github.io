@@ -1,0 +1,90 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background: linear-gradient(135deg, rgb(255,255,255) 60%, rgb(255,220,245) 100%);
+    color: rgb(30,30,30);
+    min-height: 100vh;
+}
+header {
+    background: linear-gradient(90deg, rgb(30,30,60) 60%, rgb(34, 239, 232) 100%);
+    color: #fff;
+    padding: 2.5rem 0 2rem 0;
+    text-align: center;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    letter-spacing: 1px;
+}
+nav {
+    margin-top: 1.2rem;
+}
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 1.2rem;
+    font-weight: bold;
+    padding: 0.4rem 1rem;
+    border-radius: 4px;
+    transition: background 0.2s, color 0.2s;
+}
+nav a:hover, nav a:focus {
+    background: rgb(12, 223, 188);
+    color: #fff;
+}
+section {
+    max-width: 900px;
+    margin: 2.5rem auto;
+    background: rgb(255,255,255);
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(255,120,120,0.08);
+    transition: box-shadow 0.2s;
+}
+section:hover {
+    box-shadow: 0 8px 32px rgba(255,120,120,0.13);
+}
+h2 {
+    color: rgb(120,0,255);
+    border-bottom: 2px solid rgb(255,220,245);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    letter-spacing: 0.5px;
+}
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+}
+.project {
+    background: linear-gradient(120deg, rgb(245,250,255) 80%, rgb(255,245,200) 100%);
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(120,0,255,0.06);
+    transition: transform 0.15s, box-shadow 0.15s;
+    border: 1px solid rgb(255,245,200);
+}
+.project:hover {
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 8px 32px rgba(120,0,255,0.13);
+    border-color: rgb(120,0,255);
+    cursor: pointer;
+}
+footer {
+    text-align: center;
+    padding: 1.2rem 0;
+    background: linear-gradient(90deg, rgb(30,30,60) 60%, rgb(120,255,180) 100%);
+    color: #fff;
+    margin-top: 2.5rem;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+}
+@media (max-width: 600px) {
+    section {
+        padding: 1rem;
+    }
+    h2 {
+        font-size: 1.3rem;
+    }
+    .projects {
+        gap: 1rem;
+    }
+}
