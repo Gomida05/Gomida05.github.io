@@ -5,6 +5,9 @@ body {
     color: rgb(30,30,30);
     min-height: 100vh;
     font-size: 16px;
+    box-sizing: border-box;
+    /* Prevent content from touching the edge */
+    padding: 0rem;
 }
 header {
     background: linear-gradient(90deg, rgb(30,30,60) 60%, rgb(34, 239, 232) 100%);
