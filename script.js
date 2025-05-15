@@ -1,4 +1,3 @@
-// Simple cookie consent banner implementation with unique UI
 
 function setCookie(name, value, days) {
     const expires = new Date(Date.now() + days * 864e5).toUTCString();
