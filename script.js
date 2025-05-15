@@ -4,6 +4,7 @@ function setCookie(name, value, days) {
     document.cookie = `${name}=${encodeURIComponent(value)}; expires=${expires}; path=/`;
 }
 
+
 function getCookie(name) {
     return document.cookie.split('; ').reduce((r, v) => {
         const parts = v.split('=');
