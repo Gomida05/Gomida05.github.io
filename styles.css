@@ -109,6 +109,30 @@ footer {
         gap: 1.2rem;
     }
 }
+@media (max-width: 9000px) {
+    body {
+        font-size: 16px;
+    }
+    header {
+        padding: 2.5rem 0 2rem 0;
+    }
+    nav a {
+        margin: 0 1.5rem;
+        font-size: 1.2rem;
+    }
+    section {
+        padding: 1.5rem;
+        margin: 1.5rem 1rem;
+        border-radius: 10px;
+    }
+    h2 {
+        font-size: 2.5rem;
+    }
+    .projects {
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 2rem;
+    }
+}
 
 @media (max-width: 600px) {
     body {
@@ -153,6 +177,12 @@ footer {
         padding: 0.8rem 0;
         margin-top: 1.2rem;
     }
+
+    #temperature-button {
+        width: 100%;
+        font-size: 1rem;
+        padding: 0.8rem 0;
+    }
 }
 
 #temperature-button {
@@ -172,11 +202,4 @@ footer {
     box-shadow: 0 8px 32px rgba(255,140,0,0.18);
     border-color: rgb(255,140,0);
     background: linear-gradient(90deg, rgb(255,160,40) 60%, rgb(255,230,160) 100%);
-}
-@media (max-width: 600px) {
-    #temperature-button {
-        width: 100%;
-        font-size: 1rem;
-        padding: 0.8rem 0;
-    }
 }
