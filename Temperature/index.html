@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta  name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js" defer></script>
+</head>
+<body>
+    
+    <button type="button" id="goBack" ondblclick="mainPage()" onclick="mainPage()">Return Home Page</button>
+    <form>
+        <h1 id="h2">Welcome to Our Temperature conversion</h1>
+        <h1>Temperature conversion:</h1>
+        <input type="number" onkeypress="checkKey(event)" id="textBox"> <br>
+        <label for="textBox"></label> <br>
+        
+        <input type="radio" name="new" id="toTempId">
+        <label for="toTempIds">Celsius➡Fahrenheit</label> <br>
+        <input type="radio" name="new" id="form">
+        <label for="form">Fahrenheit ➡Celsius</label> <br>
+        
+        <button type="button" onclick="convert()" ondblclick="convert()">Submit</button> <br>
+        <p id="result"></p>
+    </form>
+    
+</body>
+</html>
