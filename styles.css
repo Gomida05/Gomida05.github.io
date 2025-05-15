@@ -19,7 +19,7 @@ nav {
 nav a {
     color: #fff;
     text-decoration: none;
-    margin: 0 1.2rem;
+    margin: 0 1.0rem;
     font-weight: bold;
     padding: 0.4rem 1rem;
     border-radius: 4px;
@@ -83,7 +83,7 @@ h2 {
     transform: translateY(-6px) scale(1.03);
     box-shadow: 0 8px 32px rgba(120,0,255,0.13);
     border-color: rgb(120,0,255);
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 footer {
     text-align: center;
