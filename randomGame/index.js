@@ -1,13 +1,10 @@
 function mainPage(){
-  window.location.href = "https://myfirstpythontokotlinasbackend.onrender.com"
+  window.location.href = "https://gomida05.github.io/"
 }
 
 let userChoice = window.confirm("You have 30seconds to guess the random number");
 if (userChoice) {
-  console.log("User clicked OK (Yes).");
   startTimer()
-} else {
-  console.log("User clicked Cancel (No).");
 }
 
 
