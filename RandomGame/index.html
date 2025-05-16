@@ -8,12 +8,11 @@
     <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/616/616494.png" type="image/x-icon">
 </head>
 <body>
-   <button type="button" id="goBack" onclick="mainPage()">Return Home Page</button>
-
-
+    <button type="button" id="goBack" onclick="mainPage()">Return Home Page</button>
     
     <div>
         <h1>Guessing game</h1>
+        <button id="startTimeBtn" type="button" onclick="startTimer()">Start Timer</button>
         <div id="divOfTimer">
             <p id="demo">00s</p>
         </div>
@@ -25,6 +24,20 @@
         <br>
         <label id="ans"></label>
     </div>
-    
+
+    <script>
+    // Example timer logic
+    let timer = null;
+    let seconds = 0;
+    function startTimer() {
+        clearInterval(timer);
+        seconds = 0;
+        document.getElementById('demo').textContent = "00s";
+        timer = setInterval(() => {
+            seconds++;
+            document.getElementById('demo').textContent = (seconds < 10 ? "0" : "") + seconds + "s";
+        }, 1000);
+    }
+    </script>
 </body>
 </html>

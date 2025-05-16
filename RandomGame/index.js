@@ -1,91 +1,83 @@
-function mainPage(){
-  window.location.href = "https://gomida05.github.io"
+let answer;
+let attempts;
+let timer;
+let timeLeft = 30;
+
+function mainPage() {
+  window.location.href = "https://gomida05.github.io";
 }
 
-let userChoice = window.confirm("You have 30seconds to guess the random number");
-if (userChoice) {
-  console.log("User clicked OK (Yes).");
-  startTimer()
-} else {
-  console.log("User clicked Cancel (No).");
+function startGame() {
+  answer = Math.floor(Math.random() * 100) + 1; // 1-100
+  attempts = 0;
+  timeLeft = 30;
+  document.getElementById("ans").textContent = "";
+  document.getElementById("txt").value = "";
+  document.getElementById("txt").disabled = false;
+  document.getElementById("btn").disabled = false;
+  startTimer();
 }
 
-
-
-const answer= Math.round(Math.random() * (100-1+1))
-console.log(Math.round(answer))
-let attempts= 0;
-let guess;
+function startTimer() {
+  clearInterval(timer);
+  document.getElementById("startTimeBtn").style.display = "none";
+  document.getElementById("demo").style.display = "block";
+  document.getElementById("demo").textContent = `${timeLeft}s`;
+  timer = setInterval(() => {
+    timeLeft--;
+    document.getElementById("demo").textContent = `${timeLeft}s`;
+    if (timeLeft <= 0) {
+      clearInterval(timer);
+      document.getElementById("ans").textContent = `Time's up! The answer was ${answer}.`;
+      document.getElementById("txt").disabled = true;
+      document.getElementById("btn").disabled = true;
+      setTimeout(askReplay, 1500);
+    }
+  }, 1000);
+}
 
 function checkKey(event) {
-    if (event.keyCode === 13) {
-      event.preventDefault();
-      play();
-    }
-}
-function play(){
-    document.getElementById("ans").textContent= "please enter a valid number"
-    guess= document.getElementById("txt") //window.prompt(`Guess a number between ${minNum} - ${maxNum}`)
-    guess= Number(guess.value);
-    console.log(txt, answer)
-    //console.log(typeof guess, guess)
-
-    if (isNaN(guess)) {
-        // window.alert("please enter a valid number")
-        document.getElementById("ans").textContent= "please enter a valid number"
-    }else if(guess< 1 || guess >100){
-        document.getElementById("ans").textContent= "Please enter numbers between 0-100."
-        // window.alert("please enter a valid number")
-    }
-    else{
-        attempts++;
-        if (guess==answer){
-            document.getElementById("ans").textContent= `CORRECT! The aswer was ${answer}. It took you ${attempts} attempts`
-            let userChoice = window.confirm("Do you want to play more?");
-            if (userChoice) {
-              console.log("User clicked OK (Yes).");
-              startTimer()
-              play()
-            } else {
-              console.log("User clicked Cancel (No).");
-            }
-        } else if (guess===0) {
-            document.getElementById("ans").textContent= "please enter a valid number"
-    }
-        else if (guess < answer){
-            document.getElementById("ans").textContent= "Too Low! try agian!"
-            // window.alert("Too Low! try agian!")
-        }
-        else if (guess > answer){
-            document.getElementById("ans").textContent= "Too High! try agian!"
-            // window.alert("Too High! try agian!")
-        }
-
-    }
+  if (event.key === "Enter") {
+    event.preventDefault();
+    play();
+  }
 }
 
-
-
-
-
-
-function startTimer(){
-    var countDownDate = new Date().getTime()+30000+2000;
-    
-    var x = setInterval(function() {
-    
-      var now = new Date().getTime();
-        
-      // Find the distance between now and the count down date
-      var distance = countDownDate - now;
-      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-        
-      // Output the result in an element with id="demo"
-      document.getElementById("demo").innerHTML =seconds + "s ";
-    
-      if (distance < 0) {
-        clearInterval(x);
-        document.getElementById("demo").textContent = "Time Up!";
-      }
-    }, 1000);
+function play() {
+  const input = document.getElementById("txt");
+  let guess = Number(input.value.trim());
+  if (isNaN(guess) || guess < 1 || guess > 100) {
+    document.getElementById("ans").textContent = "Please enter a number between 1 and 100.";
+    return;
+  }
+  attempts++;
+  if (guess === answer) {
+    clearInterval(timer);
+    document.getElementById("ans").textContent = `Correct! The answer was ${answer}. Attempts: ${attempts}`;
+    document.getElementById("txt").disabled = true;
+    document.getElementById("btn").disabled = true;
+    setTimeout(askReplay, 1000);
+  } else if (guess < answer) {
+    document.getElementById("ans").textContent = "Too low! Try again.";
+  } else {
+    document.getElementById("ans").textContent = "Too high! Try again.";
+  }
 }
+
+function askReplay() {
+  if (window.confirm("Do you want to play again?")) {
+    startGame();
+  }
+}
+
+// Initial prompt
+window.onload = function () {
+  if (window.confirm("You have 30 seconds to guess the random number. Ready?")) {
+    startGame();
+  } else {
+    document.getElementById("demo").style.display = "none";
+    document.getElementById("ans").textContent = "Game cancelled.";
+    document.getElementById("txt").disabled = true;
+    document.getElementById("btn").disabled = true;
+  }
+};
