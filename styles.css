@@ -140,7 +140,7 @@ footer {
     letter-spacing: 0.5px;
 }
 
-/* Responsive Styles */
+/* Responsive Style*/
 @media (max-width: 900px) {
     section {
         max-width: 98vw;
