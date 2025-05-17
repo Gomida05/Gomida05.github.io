@@ -7,7 +7,7 @@ body {
     font-size: 16px;
     box-sizing: border-box;
     /* Prevent content from touching the edge */
-    padding: 0rem;
+    padding: 0.5rem;
 }
 header {
     background: linear-gradient(90deg, rgb(30,30,60) 60%, rgb(34, 239, 232) 100%);
