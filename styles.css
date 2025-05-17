@@ -15,6 +15,8 @@ header {
     padding: 2.5rem 0 2rem 0;
     text-align: center;
     box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    border-radius: 20px;
+    margin: 0 auto;
     letter-spacing: 1px;
 }
 nav {
@@ -36,6 +38,11 @@ nav a {
     font-size: 1rem;
 }
 nav a:hover, nav a:focus {
+    background: rgb(12, 223, 188);
+    color: #fff;
+}
+
+#homescreen {
     background: rgb(12, 223, 188);
     color: #fff;
 }
