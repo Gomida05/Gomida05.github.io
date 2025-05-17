@@ -50,7 +50,12 @@ nav a:hover, nav a:focus {
 }
 
 
-
+#download-icon {
+    width: 20px; 
+    height: 20px; 
+    vertical-align: middle; 
+    margin-right: 5px;
+}
 
 #download-button {
     background: linear-gradient(90deg, rgb(30,30,60) 60%, rgb(120,255,180) 100%);
