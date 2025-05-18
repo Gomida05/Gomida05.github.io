@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Projects</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=web"/>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="/icon.webp" type="image/x-icon">
     <link rel="apple-touch-icon" href="/icon.webp">
@@ -24,91 +25,109 @@
             <a href="https://gomida05.github.io/#contact" target="_self">Contact</a>
         </nav>
     </header>
-    <div class="projects">
-        <div class="project">
-            <h3>Android's YouTube App</h3>
-            <p>
-                A YouTube clone app for Android built with Jetpack Compose. It allows users to browse and watch videos. 
-                Features include search, play in the background, playlists, and more.
-        
-                <br>
-                <strong> Languages:</strong> Kotlin for frontend and Python for backend.
-                <br>
-                <strong> Frameworks:</strong> Jetpack Compose for frontend.
-                <br>
-                <strong> Tools:</strong> Android Studio for development.
-                <br>
-            </p>
-            <a href="https://github.com/Gomida05/VideoDownloader/raw/master/app/NewRealse.apk" target="_self">
-                <button type="button" id="download-button">
-                    <img src="/icon.webp" alt="Download Icon" id="download-icon"/>
-                    Download the app here (only for Android)
-                </button>
-            </a>
-        </div>
+    <main class="main-content">
+        <h1>Welcome to My Projects Page</h1>
 
-        <div class="project">
-            <h3>Android's Music Player App</h3>
-            <p>
-                A music player app for Android built with Jetpack Compose. It allows users to play and manage their music library.
-                Features include playlists, equalizer settings, and background playback.
+        <h5>These projects showcase my skills in web development, Android app development, and more.</h5>
+        <p>Feel free to explore and provide feedback!</p>
+    </main>
+        <section class="android-apps">
+            
+            <h2>
+                <img src="https://cdn-icons-png.flaticon.com/512/888/888839.png " width="40" height="40" alt="Android Icon" title="" class="img-small">        
+                Android Apps </h2>
+                <p>Here are some of the Android apps I have developed.</p>
                 
-                <br>
-                <strong> Languages:</strong> Kotlin.
-                <br>
-                <strong> Frameworks:</strong> Jetpack Compose for frontend.
-                <br>
-                <strong> Tools:</strong> Android Studio for development.
-                <br>
-            </p>
-            <p>
-                <strong>Note:</strong> The app is still in development and may have bugs. Please report any issues you encounter.
-                <br>
-                <strong>Disclaimer:</strong> The app is not affiliated with or endorsed by any music streaming service.
-                <br>
-                <strong>License:</strong> The app is licensed under the MIT License. See the LICENSE file for more details.
-                <br>
-                <strong>Privacy Policy:</strong> The app does not collect any personal data. It only accesses the device's local storage to play music files.
-                <br>
-                <strong>Contact:</strong> If you have any questions or feedback, please contact me at</p>
+                <div class="projects">
+                    <div class="project">
+                        <h3>Android's YouTube App</h3>
+                        <p>
+                            A YouTube clone app for Android built with Jetpack Compose. It allows users to browse and watch videos. 
+                            Features include search, play in the background, playlists, and more.
+                            
+                            <br>
+                            <strong> Languages:</strong> Kotlin for frontend and Python for backend.
+                            <br>
+                            <strong> Frameworks:</strong> Jetpack Compose for frontend.
+                            <br>
+                            <strong> Tools:</strong> Android Studio for development.
+                            <br>
+                        </p>
+                        <a href="https://github.com/Gomida05/VideoDownloader/raw/master/app/NewRealse.apk" target="_self">
+                            <button type="button" id="download-button">
+                                <img src="/icon.webp" alt="Download Icon" id="download-icon"/>
+                                Download the app here (only for Android)
+                            </button>
+                        </a>
+            </div>
+            
+            <div class="project">
+                <h3>Android's Music Player App</h3>
+                <p>
+                    A music player app for Android built with Jetpack Compose. It allows users to play and manage their music library.
+                    Features include playlists, equalizer settings, and background playback.
+                    
+                    <br>
+                    <strong> Languages:</strong> Kotlin.
+                    <br>
+                    <strong> Frameworks:</strong> Jetpack Compose for frontend.
+                    <br>
+                    <strong> Tools:</strong> Android Studio for development.
+                    <br>
+                </p>
+
+                    <a href="https://github.com/Gomida05/Das-Music-Player/raw/master/app/app_debug.apk" target="_self">
+                        <button type="button" id="download-button">
+                            <img src="music_app.webp" alt="Music Player Icon" id="download-icon"/>
+                            Download the app here (only for Android)
+                        </button>
+                    </a>
+                </div>
                 
-            <a href="https://github.com/Gomida05/Das-Music-Player/raw/master/app/app_debug.apk" target="_self">
-                <button type="button" id="download-button">
-                    <img src="music_app.webp" alt="Music Player Icon" id="download-icon"/>
-                    Download the app here (only for Android)
-                </button>
-            </a>
-        </div>
-
-
-        <div class="project">
-            <h3>Temperature Converter</h3>
-            <p>A simple web app to convert temperatures between Celsius and Fahrenheit. Built with HTML, CSS, and JavaScript.</p>
-            <a href="/Temperature">
                 
-                <button type="button" id="temperature-button">
-                    <img src="https://cdn-icons-png.flaticon.com/512/1116/1116453.png" 
-                    alt="Weather Icon" id="weather-icon"
-                    style="width: 20px; height: 20px; vertical-align: middle; margin-right: 5px;" />
-                    Open the app here
-                </button>
-            </a>
+            </section>
+            
+            <section class="web-apps">
+                <h2>
+                    <span class="material-symbols-outlined">web</span>
+                    Web Apps 
+                </h2>
+                <p>Here are some of the web apps I have developed:</p>
+                <!-- <p>Click on the app name to view the source code or download the app.</p> -->
+                <div class="project">
+                    <h3>Temperature Converter</h3>
+                    <p>A simple web app to convert temperatures between Celsius and Fahrenheit. Built with HTML, CSS, and JavaScript.</p>
+                    <a href="/Temperature">
+                        
+                        <button type="button" id="temperature-button">
+                            <img src="https://cdn-icons-png.flaticon.com/512/1116/1116453.png" 
+                            alt="Weather Icon" id="weather-icon"
+                            style="width: 20px; height: 20px; vertical-align: middle; margin-right: 5px;" />
+                            Open the app here
+                        </button>
+                    </a>
+                </div>
+                
+                <div class="project">
+                    <h3>Guessing Game</h3>
+                    <p>A simple guessing game where the user has to guess a number between 1 and 100. Built with HTML, CSS, and JavaScript.</p>
+                    <a href="/RandomGame">
+                        <button type="button" id="guessing-button">
+                            <img src="https://cdn-icons-png.flaticon.com/512/616/616494.png"
+                            alt="Guessing Game Icon" id="guessing-game-icon"
+                            style="width: 20px; height: 20px; vertical-align: middle; margin-right: 5px;" />
+                            Open the app here
+                        </button>
+                    </a>
+                </div>
+            </section>
+            
         </div>
-
-        <div class="project">
-            <h3>Guessing Game</h3>
-            <p>A simple guessing game where the user has to guess a number between 1 and 100. Built with HTML, CSS, and JavaScript.</p>
-            <a href="/RandomGame">
-                <button type="button" id="guessing-button">
-                    <img src="https://cdn-icons-png.flaticon.com/512/616/616494.png"
-                    alt="Guessing Game Icon" id="guessing-game-icon"
-                    style="width: 20px; height: 20px; vertical-align: middle; margin-right: 5px;" />
-                    Open the app here
-                </button>
-            </a>
-        </div>
-
-    </div>
+        <footer>
+            <a href="https://github.com/gomida05" target="_blank">For more projects, check out my GitHub profile</a>
+            <p>Thank you for visiting my projects page!</p>
+            <p>&copy; 2023 Esrom Habteab. All rights reserved.</p>    
+        </footer>
+    </body>
     
-</body>
 </html>

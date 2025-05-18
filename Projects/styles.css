@@ -39,6 +39,37 @@ nav a {
     display: inline-block;
     font-size: 1rem;
 }
+.material-symbols-outlined {
+    font-variation-settings:
+      'FILL' 0,
+      'wght' 400,
+      'GRAD' 0,
+      'opsz' 24;
+    /* font-size: 1.2rem; */
+}
+
+.main-content {
+    background-color: #f0f0f0; padding: 20px; border-radius: 10px; margin: 20px 0;
+    box-shadow: 0 2px 8px rgba(120,0,255,0.06);
+    transition: transform 0.15s, box-shadow 0.15s;
+    border: 1px solid rgb(255,245,200);
+
+}
+.android-apps {
+    
+    margin-top: 0.2rem;
+    background: linear-gradient(90deg, rgb(30, 234, 217) 60%, rgb(120,255,180) 100%);
+    border-radius: 21px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(120,0,255,0.06);
+}
+.web-apps {
+    margin-top: 0.2rem;
+    background: linear-gradient(90deg, rgb(30, 234, 217) 60%, rgb(255,220,120) 100%);
+    border-radius: 21px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(120,0,255,0.06);
+}
 #projects {
     background: rgb(12, 223, 188);
     color: #fff;
@@ -131,4 +162,18 @@ nav a:hover, nav a:focus {
     transform: translateY(-6px) scale(1.03);
     box-shadow: 0 8px 32px rgba(120,0,255,0.13);
     border-color: rgb(120,0,255);
+}
+
+footer {
+    text-align: center;
+    padding: 1.2rem 0;
+    background: linear-gradient(90deg, rgb(30,30,60) 60%, rgb(120,255,180) 100%);
+    color: #fff;
+    margin-top: 2.5rem;
+    font-size: 1rem;
+    /* letter-spacing: 0.5px; */
+    /* font-weight: bold; */
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(120,0,255,0.06);
+    transition: transform 0.15s, box-shadow 0.15s;
 }
