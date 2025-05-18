@@ -56,7 +56,7 @@ nav a:hover, nav a:focus {
     margin-right: 5px;
 }
 
-#download-button, #music-button {
+#download-button {
     background: linear-gradient(90deg, rgb(30,30,60) 60%, rgb(120,255,180) 100%);
     color: #fff;
     padding: 1rem 2rem;
@@ -67,7 +67,7 @@ nav a:hover, nav a:focus {
     cursor: pointer;
     transition: background 0.2s, transform 0.2s;
 }
-#download-button:hover, #download-button:focus, #music-button:hover, #music-button:focus {
+#download-button:hover, #download-button:focus {
     transform: translateY(-6px) scale(1.03);
     box-shadow: 0 8px 32px rgba(120,0,255,0.13);
     border-color: rgb(120,0,255);
@@ -76,17 +76,6 @@ nav a:hover, nav a:focus {
 
 
 
-#music-icon {
-    width: 20px; 
-    height: 20px; 
-    vertical-align: middle; 
-    margin-right: 5px;
-    object-fit: contain ;
-    border-radius: 20%;
-    transition: transform 0.15s, box-shadow 0.15s;
-    border-image-width: 100%;
-
-}
 
 #temperature-button {
     background: linear-gradient(90deg, rgb(0,140,255) 60%, rgb(255,220,120) 100%);
